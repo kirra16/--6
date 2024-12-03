@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(168, 160, 151);
+}
+.product-container {
+    display: grid;
+    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row dense;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+    background-color: #f4efe7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: rgb(66, 58, 48);
+}
+
+.card p {
+    font-size: 1em;
+    color: rgb(139, 127, 113);
+}
+
+.price {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: auto;
+    color: rgb(139, 127, 113);
+}
+
+
+@media (min-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+}
+
+.card.special-offer {
+    order: -1;
+}
